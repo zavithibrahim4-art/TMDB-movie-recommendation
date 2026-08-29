@@ -2,8 +2,7 @@ const options = {
   method: "GET",
   headers: {
     accept: "application/json",
-    Authorization:
-      "Bearer TMDB_API_KEY",
+    Authorization: "Bearer TMDB_API_KEY",
   },
 };
 async function start() {
@@ -119,12 +118,6 @@ async function getMovies() {
   popularThisWeek = popularData.results;
   popularInAction = actionData.results;
   popularInHorror = horrorData.results;
-  console.log(trendingMovies);
-  console.log(topRatedMovies);
-  console.log(newReleases);
-  console.log(popularThisWeek);
-  console.log(popularInAction);
-  console.log(popularInHorror);
 }
 
 async function getMovieByName(movieName) {
@@ -137,7 +130,6 @@ async function getMovieByName(movieName) {
   let inputValue = document.querySelector("input").value;
   const movie = data.results[0];
 
-  console.log(movie);
   if (movie !== undefined) {
     document.querySelector(".js-adder").innerHTML = /*html*/ `
   <div class="search-movie" onclick="getTrailer(${movie.id})">
